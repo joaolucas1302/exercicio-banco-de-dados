@@ -76,7 +76,8 @@ CREATE TABLE materias (
     notas NUMERIC[],
     media NUMERIC
 );
-📂 Estrutura do Projeto
+
+##📂 Estrutura do Projeto
 java
 Copiar código
 📦 exercicio-banco-de-dados
@@ -85,7 +86,8 @@ Copiar código
  ┣ 📜 tsconfig.json                → Configuração TypeScript
  ┣ 📜 README.md                    → Documentação do projeto
  ┗ 📂 node_modules/                → Bibliotecas instaladas
-🚀 Como Executar o Projeto
+
+##🚀 Como Executar o Projeto
 1️⃣ Clonar o repositório
 bash
 Copiar código
@@ -121,7 +123,8 @@ Se estiver usando JavaScript:
 bash
 Copiar código
 node ExercicioBancoDeDados.js
-🧮 Exemplo de Execução
+
+##🧮 Exemplo de Execução
 yaml
 Copiar código
 --- Cadastro de Novo Aluno ---
@@ -147,7 +150,8 @@ Digite a nota 1: 7
 Média de História: 7.50
 
 ✅ Todas as informações foram salvas no banco de dados com sucesso!
-🧰 Comandos Úteis do Git
+
+##🧰 Comandos Úteis do Git
 bash
 Copiar código
 # Verificar o repositório remoto
@@ -160,7 +164,8 @@ git pull --rebase origin main
 git add .
 git commit -m "Atualiza código e documentação"
 git push -u origin main
-📘 Aprendizados
+
+##📘 Aprendizados
 Durante o desenvolvimento deste projeto foram aplicados conceitos de:
 
 Conexão segura entre Node.js e PostgreSQL
@@ -173,30 +178,16 @@ Uso de transações SQL (BEGIN / COMMIT / ROLLBACK)
 
 Boas práticas de estruturação e versionamento de código
 
-👨‍💻 Autor
+##👨‍💻 Autor
 João Lucas
 💼 Estudante de Desenvolvimento de Sistemas
 🌐 github.com/joaolucas1302
 📍 Brasil
 
-📜 Licença
+##📜 Licença
 Este projeto foi desenvolvido para fins educacionais e de aprendizado.
 Você pode utilizá-lo e modificá-lo livremente, desde que mantenha os créditos do autor.
 
-Feito com ❤️ usando Node.js, TypeScript e PostgreSQL.
+Feito com usando Node.js, TypeScript e PostgreSQL.
 
-yaml
-Copiar código
 
----
-
-### ✅ Como usar
-
-1. Copie **todo o conteúdo acima**.  
-2. Cole no seu arquivo `README.md` dentro da pasta do projeto.  
-3. Faça o commit e envie pro GitHub:
-
-```bash
-git add README.md
-git commit -m "Adiciona README completo e organizado"
-git push
