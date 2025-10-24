@@ -1,18 +1,61 @@
-# 🎓 Exercício Banco de Dados — Node.js + TypeScript + PostgreSQL
+<!-- ===================================================== -->
+<!-- 📘 Projeto: Exercício Banco de Dados - Node.js + TypeScript + PostgreSQL -->
+<!-- Autor: João Lucas -->
+<!-- ===================================================== -->
 
-Um projeto educacional desenvolvido em **Node.js** e **TypeScript** que cadastra alunos e suas notas em três matérias — **Matemática**, **Geografia** e **História** — salvando tudo em um banco de dados **PostgreSQL**.  
-O sistema calcula automaticamente a média de 8 provas por matéria e grava os resultados.
+<h1 align="center">🎓 Exercício Banco de Dados</h1>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white"/>
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/License-Educacional-blue?style=for-the-badge"/>
+</p>
+
+<p align="center">
+  Um projeto desenvolvido em <b>Node.js</b> + <b>TypeScript</b> que cadastra alunos e suas notas em 3 matérias
+  (<b>Matemática</b>, <b>Geografia</b> e <b>História</b>), calcula automaticamente a média e salva os dados
+  no banco de dados <b>PostgreSQL</b>.
+</p>
 
 ---
 
-## 🚀 Funcionalidades
+## 🧩 Sumário
 
-✅ Cadastro de alunos (nome, série e idade)  
-✅ Inserção de notas para 3 matérias (8 provas cada)  
-✅ Cálculo automático da média  
-✅ Armazenamento dos dados no PostgreSQL  
-✅ Tratamento de erros com TypeScript  
-✅ Interface interativa via terminal  
+- [🎯 Objetivo](#-objetivo)
+- [⚙️ Tecnologias Utilizadas](#️-tecnologias-utilizadas)
+- [🧠 Estrutura do Banco de Dados](#-estrutura-do-banco-de-dados)
+- [📂 Estrutura do Projeto](#-estrutura-do-projeto)
+- [🚀 Como Executar o Projeto](#-como-executar-o-projeto)
+- [🧮 Exemplo de Execução](#-exemplo-de-execução)
+- [🧰 Comandos Úteis do Git](#-comandos-úteis-do-git)
+- [📘 Aprendizados](#-aprendizados)
+- [👨‍💻 Autor](#-autor)
+- [📜 Licença](#-licença)
+
+---
+
+## 🎯 Objetivo
+
+Este projeto tem como propósito praticar **integração entre Node.js e PostgreSQL** utilizando **TypeScript**.  
+O sistema permite:
+
+- Cadastrar alunos com nome, série e idade.  
+- Registrar notas de 8 provas para 3 matérias.  
+- Calcular automaticamente a média de cada matéria.  
+- Armazenar tudo de forma segura no banco de dados.
+
+---
+
+## ⚙️ Tecnologias Utilizadas
+
+| Tecnologia | Descrição |
+|-------------|------------|
+| 🟩 **Node.js** | Ambiente de execução JavaScript no servidor |
+| 🟦 **TypeScript** | Superset do JavaScript com tipagem estática |
+| 🐘 **PostgreSQL** | Banco de dados relacional |
+| 🔌 **pg** | Biblioteca de conexão Node ↔ PostgreSQL |
+| 💬 **readline-sync** | Entrada interativa via terminal |
 
 ---
 
@@ -33,60 +76,52 @@ CREATE TABLE materias (
     notas NUMERIC[],
     media NUMERIC
 );
-⚙️ Tecnologias utilizadas
-Tecnologia	Função
-🟩 Node.js	Ambiente de execução JavaScript
-🟦 TypeScript	Tipagem estática e segurança de código
-🐘 PostgreSQL	Banco de dados relacional
-💬 readline-sync	Leitura interativa no terminal
-🔌 pg	Biblioteca para conectar ao PostgreSQL
-
-🧩 Estrutura do projeto
-bash
+📂 Estrutura do Projeto
+java
 Copiar código
-📂 exercicio-banco-de-dados/
- ├── ExercicioBancoDeDados.ts     # Script principal
- ├── package.json
- ├── tsconfig.json                # (se estiver usando TypeScript)
- ├── node_modules/
- └── README.md
-💻 Como executar o projeto
+📦 exercicio-banco-de-dados
+ ┣ 📜 ExercicioBancoDeDados.ts     → Script principal (TypeScript)
+ ┣ 📜 package.json                 → Dependências e scripts
+ ┣ 📜 tsconfig.json                → Configuração TypeScript
+ ┣ 📜 README.md                    → Documentação do projeto
+ ┗ 📂 node_modules/                → Bibliotecas instaladas
+🚀 Como Executar o Projeto
 1️⃣ Clonar o repositório
 bash
 Copiar código
 git clone https://github.com/joaolucas1302/exercicio-banco-de-dados.git
 cd exercicio-banco-de-dados
-2️⃣ Instalar as dependências
+2️⃣ Instalar dependências
 bash
 Copiar código
 npm install
 3️⃣ Criar o banco de dados no PostgreSQL
-Entre no psql e execute o script SQL da seção anterior.
+Abra o psql e execute o script SQL da seção “Estrutura do Banco de Dados”.
 
 4️⃣ Configurar o banco no código
-No arquivo ExercicioBancoDeDados.ts, ajuste a configuração:
+No arquivo ExercicioBancoDeDados.ts, ajuste os dados conforme o seu ambiente:
 
 ts
 Copiar código
 const dbConfig = {
-    user: 'aluno',       // usuário do PostgreSQL
-    host: 'localhost',   // ou o nome do seu servidor
+    user: 'aluno',       // Usuário do PostgreSQL
+    host: 'localhost',   // Host do servidor
     database: 'db_profedu',
-    password: '102030',  // sua senha
+    password: '102030',  // Senha do PostgreSQL
     port: 5432,
 };
-5️⃣ Rodar o programa
-Se estiver em TypeScript:
+5️⃣ Executar o programa
+Se estiver usando TypeScript:
 
 bash
 Copiar código
 npx ts-node ExercicioBancoDeDados.ts
-Se estiver em JavaScript:
+Se estiver usando JavaScript:
 
 bash
 Copiar código
 node ExercicioBancoDeDados.js
-🧮 Exemplo de execução
+🧮 Exemplo de Execução
 yaml
 Copiar código
 --- Cadastro de Novo Aluno ---
@@ -112,7 +147,7 @@ Digite a nota 1: 7
 Média de História: 7.50
 
 ✅ Todas as informações foram salvas no banco de dados com sucesso!
-🧰 Comandos úteis do Git
+🧰 Comandos Úteis do Git
 bash
 Copiar código
 # Verificar o repositório remoto
@@ -126,23 +161,42 @@ git add .
 git commit -m "Atualiza código e documentação"
 git push -u origin main
 📘 Aprendizados
-Durante o desenvolvimento deste projeto, foram aplicados conceitos de:
+Durante o desenvolvimento deste projeto foram aplicados conceitos de:
 
-Conexão entre Node.js e PostgreSQL
+Conexão segura entre Node.js e PostgreSQL
 
-Manipulação de arrays e médias no banco de dados
+Manipulação de arrays e cálculos de média
 
-Tipagem forte com TypeScript
+Tipagem estática e tratamento de erros com TypeScript
 
-Uso de transações SQL para garantir integridade dos dados
+Uso de transações SQL (BEGIN / COMMIT / ROLLBACK)
 
-Boas práticas de organização de código
+Boas práticas de estruturação e versionamento de código
 
-🧑‍💻 Autor
+👨‍💻 Autor
 João Lucas
-📍 Estudante de Ciencias da Computação
-🔗 github.com/joaolucas1302
+💼 Estudante de Desenvolvimento de Sistemas
+🌐 github.com/joaolucas1302
+📍 Brasil
 
 📜 Licença
-Este projeto foi desenvolvido para fins educacionais e pode ser utilizado livremente para estudo e aprendizado.
-Feito com  utilizando Node.js + TypeScript + PostgreSQL.
+Este projeto foi desenvolvido para fins educacionais e de aprendizado.
+Você pode utilizá-lo e modificá-lo livremente, desde que mantenha os créditos do autor.
+
+Feito com ❤️ usando Node.js, TypeScript e PostgreSQL.
+
+yaml
+Copiar código
+
+---
+
+### ✅ Como usar
+
+1. Copie **todo o conteúdo acima**.  
+2. Cole no seu arquivo `README.md` dentro da pasta do projeto.  
+3. Faça o commit e envie pro GitHub:
+
+```bash
+git add README.md
+git commit -m "Adiciona README completo e organizado"
+git push
